@@ -20,14 +20,12 @@ export default {
  name: "MonacoEditor",
  async mounted() {
 
-const HTML_CODE = (`
-<h1>Hello World</h1>
-<p>This is the Monaco Editor for code101.fr</p>
-`);
+    const HTML_CODE = (`
+    <h1>Hello Monde</h1>
+    <p>This is the Monaco Editor for code101.fr</p>
+    `);
 
-   loader.init().then((monaco) => {
-
-      const editorOptions = {
+    const editorOptions = {
         value: HTML_CODE,
         language: "html",
         minimap: { enabled: false },
@@ -35,13 +33,15 @@ const HTML_CODE = (`
         contextmenu: false,
         fontSize: 12,
         scrollbar: {
-          useShadows: false,
-          vertical: "visible",
-          horizontal: "visible",
-          horizontalScrollbarSize: 12,
-          verticalScrollbarSize: 12
+            useShadows: false,
+            vertical: "visible",
+            horizontal: "visible",
+            horizontalScrollbarSize: 12,
+            verticalScrollbarSize: 12
         }
-       };
+    };
+
+   loader.init().then((monaco) => {
 
      let editor = monaco.editor.create(document.getElementById("editorCode"), editorOptions);
      const editorPreview = document.getElementById('editorPreview').contentWindow.document;
