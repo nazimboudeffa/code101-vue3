@@ -7,7 +7,7 @@
          <p>Ajouter une balise h2 avec comme contenu <b>J'aime coder</b></p>
       </div>
       <div class="code">
-         <div id="editorCode"></div>
+         <div id="editorCode" ref="editorRef"></div>
          <v-btn
             color="primary"
             elevation="2"
@@ -25,15 +25,17 @@
 
 <script>
 import { onMounted } from "vue";
+import * as monaco from 'monaco-editor';
 //import loader from "@monaco-editor/loader";
-import * as monaco from "monaco-editor";
+
 
 export default {
  name: "MonacoEditor",
  setup() {
-      let codeEditor = null;
 
-      function initEditor() {
+let codeEditor = null;
+let codeValue;
+
 const HTML_CODE = 
     (`<h1>Hello Monde</h1>
 <p>This is the Monaco Editor for code101.fr</p>
@@ -55,27 +57,56 @@ const HTML_CODE =
         }
     };
 
+window.MonacoEnvironment = {
+   getWorkerUrl: function() {
+      return `data:text/javascript;charset=utf-8,${encodeURIComponent(`
+        self.MonacoEnvironment = {
+          baseUrl: 'https://cdn.jsdelivr.net/npm/monaco-editor/min/'
+        };
+        importScripts('https://cdn.jsdelivr.net/npm/monaco-editor/min/vs/base/worker/workerMain.js');`)}`;
+   }
+};
 
+//let codeValue;
 //loader.init().then((monaco) => {
+   const createEditor = () => {
+      monaco.editor.defineTheme("lightBlue", {
+        base: "vs-dark",
+        inherit: true,
+        rules: [{ background: "#1D252C" }],
+        colors: {
+          "editor.background": "#1D252C",
+        },
+      });
+
+      monaco.editor.setTheme("lightBlue");
+
       codeEditor = monaco.editor.create(document.getElementById('editorCode'), editorOptions);
       const editorPreview = document.getElementById('editorPreview').contentWindow.document;
       editorPreview.body.innerHTML = HTML_CODE;
     
-   //console.log(codeEditor.getValue());
+      codeEditor.onDidChangeModelContent(() => {
+         //editorPreview.body.innerHTML = codeEditor.getValue();
+         codeValue = codeEditor.value.getValue();
+      });
+   }
 //});  
-}    
-      
 
-      onMounted(() => {
-      initEditor();
-      })
+      const getValue = () => {
+        console.log('codeEditor.getValue', codeEditor.getValue());        
+      }
 
-      return { codeEditor }
-   },
+onMounted(()=>{
+   createEditor()
+})
+
+return { getValue, codeValue }
+
+},
  methods: {
    runCode: ()=>{
-            console.log("runCode");
-      //console.log(codeEditor.getValue());
+      console.log("runCode");
+      //console.log(codeValue)
    }
  }
 };
