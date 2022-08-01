@@ -1,100 +1,121 @@
 <template>
   <!-- <div id="editor" style="width: 500px; height: 500px"></div> -->
-  <div class="wrapper">
-    <div class="editor">
-        <div class="editor__code">
-            <div id="editorCode"></div>
-        </div>
+  <v-container fluide>
+    <div class="course">
+      <div class="instructions">
+         <h1>Cours 1</h1>
+         <p>Ajouter une balise h2 avec comme contenu <b>J'aime coder</b></p>
+      </div>
+      <div class="code">
+         <div id="editorCode"></div>
+         <v-btn
+            color="primary"
+            elevation="2"
+            tile
+            @click="runCode()"
+         >Exécuter</v-btn>
+      </div>
 
-        <div class="editor__preview">
-            <iframe id="editorPreview" frameborder="0"></iframe>
-        </div>
+      <div class="preview">
+         <iframe id="editorPreview" frameborder="0"></iframe>
+      </div>
     </div>
-  </div>
+   </v-container>
 </template>
 
 <script>
-import loader from "@monaco-editor/loader";
+import { onMounted } from "vue";
+//import loader from "@monaco-editor/loader";
+import * as monaco from "monaco-editor";
 
 export default {
  name: "MonacoEditor",
- async mounted() {
+ setup() {
+      let codeEditor = null;
 
-    const HTML_CODE = (`
-    <h1>Hello Monde</h1>
-    <p>This is the Monaco Editor for code101.fr</p>
-    `);
+      function initEditor() {
+const HTML_CODE = 
+    (`<h1>Hello Monde</h1>
+<p>This is the Monaco Editor for code101.fr</p>
+`);
 
     const editorOptions = {
         value: HTML_CODE,
-        language: "html",
+        language: 'html',
         minimap: { enabled: false },
         automaticLayout: true,
         contextmenu: false,
         fontSize: 12,
         scrollbar: {
             useShadows: false,
-            vertical: "visible",
-            horizontal: "visible",
+            vertical: 'visible',
+            horizontal: 'visible',
             horizontalScrollbarSize: 12,
             verticalScrollbarSize: 12
         }
     };
 
-   loader.init().then((monaco) => {
 
-     let editor = monaco.editor.create(document.getElementById("editorCode"), editorOptions);
-     const editorPreview = document.getElementById('editorPreview').contentWindow.document;
+//loader.init().then((monaco) => {
+      codeEditor = monaco.editor.create(document.getElementById('editorCode'), editorOptions);
+      const editorPreview = document.getElementById('editorPreview').contentWindow.document;
       editorPreview.body.innerHTML = HTML_CODE;
-
-      editor.onDidChangeModelContent(() => {
-          editorPreview.body.innerHTML = editor.getValue();
-      });
     
-   });
-  
- },
+   //console.log(codeEditor.getValue());
+//});  
+}    
+      
+
+      onMounted(() => {
+      initEditor();
+      })
+
+      return { codeEditor }
+   },
+ methods: {
+   runCode: ()=>{
+            console.log("runCode");
+      //console.log(codeEditor.getValue());
+   }
+ }
 };
 </script>
 
 <style>
-html,
-body {
-   margin: 0;
-   padding: 0;
-}
-
-.wrapper {
+.course {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #999;
+   padding: 10px;
+   margin: 0px;
    display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-evenly;
+   align-items: stretch;
 }
 
-.editor {
-   width: 100%;
-   max-width: 900px;
-   margin: 50px auto 40px;
-   height: 500px;
-   display: flex;
-   box-shadow: 0 7px 7px rgba(0, 0, 0, .1), 0 -2px 3px rgba(0, 0, 0, .125);
+.instructions {
+   width: 30%;
 }
 
-.editor__code {
-   position: relative;
-   border: none;
-   flex-basis: 70%;
+.code {
+  background-color: #efefef;
+  flex-grow: 1;
+  width: 50%;
+  height: 90%;
 }
 
-.editor__preview {
-   position: relative;
-   flex-basis: 30%;
+.preview {
+   width: 20%;
+   margin-left: 10px;
 }
 
-.editor__code > *,
-.editor__preview > * {
-   position: absolute;
-   width: 100%;
+.code > *{
    height: 100%;
 }
+
 </style>
