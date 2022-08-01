@@ -34,7 +34,6 @@ export default {
  setup() {
 
 let codeEditor = null;
-let codeValue;
 
 const HTML_CODE = 
     (`<h1>Hello Monde</h1>
@@ -85,30 +84,25 @@ window.MonacoEnvironment = {
       const editorPreview = document.getElementById('editorPreview').contentWindow.document;
       editorPreview.body.innerHTML = HTML_CODE;
     
+      /*
       codeEditor.onDidChangeModelContent(() => {
-         //editorPreview.body.innerHTML = codeEditor.getValue();
-         codeValue = codeEditor.value.getValue();
+         editorPreview.body.innerHTML = codeEditor.getValue();
       });
+      */
    }
 //});  
 
-      const getValue = () => {
-        console.log('codeEditor.getValue', codeEditor.getValue());        
+      const runCode = () => {
+        document.getElementById('editorPreview').contentWindow.document.body.innerHTML = codeEditor.getValue();        
       }
 
 onMounted(()=>{
    createEditor()
 })
 
-return { getValue, codeValue }
+return { runCode }
 
-},
- methods: {
-   runCode: ()=>{
-      console.log("runCode");
-      //console.log(codeValue)
-   }
- }
+}
 };
 </script>
 
