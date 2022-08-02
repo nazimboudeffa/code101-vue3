@@ -43,18 +43,17 @@ export default defineComponent({
     const pricingDetails = [
       {
         users: "1 utilisateur",
-        pro: "cours pro",
+        courses: "cours débutants",
         members: "zone membre"
       },
       {
         users: "1 utilisateur",
-        pro: "cours pro",
+        courses: "cours pro",
         member: "zone membre",
-        roadmap: "roadmap"
       },
       {
         users: "4 utilisateurs",
-        pro: "cours pro",
+        courses: "cours pro",
         member: "zone membre",
         roadmap: "roadmap",
         career: "carrière"
