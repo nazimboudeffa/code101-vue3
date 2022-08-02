@@ -1,9 +1,9 @@
 <template>
     <div id="hero">
     <div class="hero-text">
-        <h1>Apprenez à coder</h1>
+        <h1>Apprenez à coder en ligne</h1>
         <p>Apprendre à coder n'a jamais été aussi facile</p>
-        <a href="/cours" class="btn">Tester l'Editeur</a>
+        <a href="/tester" class="btn">Tester l'Editeur</a>
     </div>
     </div>
 </template>

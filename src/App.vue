@@ -9,7 +9,7 @@
       </div>
       <div class="buttons">
         <span>Login</span>
-        <button class="btn">Register</button>
+        <button class="menubtn">Register</button>
       </div>
     </nav>
   </header>
@@ -66,9 +66,10 @@ export default {
     color: white;
     text-decoration: none;
   }
-  .btn{
+  .menubtn{
     background:white;
     color:black;
+    padding: 0 24px;
     border-radius:24px;
     height:32px;
     margin-left:10px;
