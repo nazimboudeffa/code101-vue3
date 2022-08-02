@@ -55,6 +55,7 @@ export default {
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
+    padding: 10px;
   }
   .logo{
     font-weight:700;
@@ -64,6 +65,14 @@ export default {
     margin-right:20px;
     cursor:pointer;
     color: white;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  .onglets a:hover{
+    margin-right:20px;
+    cursor:pointer;
+    color: black;
+    background-color: white;
     text-decoration: none;
   }
   .menubtn{
