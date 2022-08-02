@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '@/views/HomePage.vue';
 import CoursesPage from '@/views/CoursesPage.vue';
 import PricePage from '@/views/PricePage.vue';
-import CoursePage from '@/views/CoursePage.vue';
+import EditorPage from '@/views/EditorPage.vue';
 
 const routes = [
   {
@@ -22,8 +22,8 @@ const routes = [
   },
   {
     name: 'Editor',
-    path: '/tester',
-    component: CoursePage
+    path: '/editor',
+    component: EditorPage
   },
 ];
 

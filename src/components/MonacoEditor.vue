@@ -9,7 +9,7 @@
          </div>
 
          <div class="code">
-            <div id="editorCode" ref="editorRef"></div>
+            <div id="editorCode"></div>
             <v-btn
                color="primary"
                elevation="2"
@@ -30,10 +30,12 @@
 import { onMounted } from "vue";
 import * as monaco from 'monaco-editor';
 //import loader from "@monaco-editor/loader";
+import { mapGetters } from 'vuex';
 
 
 export default {
  name: "MonacoEditor",
+ computed: mapGetters(['allCourses']),
  setup() {
 
 let codeEditor = null;
