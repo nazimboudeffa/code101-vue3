@@ -21,6 +21,7 @@
         </li>
       </ul>
     </PricingCard>
+    <!--
     <PricingCard title="Team" price="9.99€">
       <ul>
         <li v-for="(item, index) in pricingDetails" :key="index">
@@ -30,6 +31,7 @@
         </li>
       </ul>
     </PricingCard>
+    -->
   </div>
 </div>
 </template>
@@ -42,15 +44,17 @@ export default defineComponent({
   setup() {
     const pricingDetails = [
       {
-        users: "1 utilisateur",
+        //users: "1 utilisateur",
         courses: "cours débutants",
         members: "zone membre"
       },
       {
-        users: "1 utilisateur",
+        //users: "1 utilisateur",
         courses: "cours pro",
         member: "zone membre",
-      },
+        roadmap: "roadmap"
+      }
+      /*,
       {
         users: "5 utilisateurs",
         courses: "cours pro",
@@ -58,6 +62,7 @@ export default defineComponent({
         roadmap: "roadmap",
         career: "carrière"
       },
+      */
     ];
     return {
       pricingDetails,
@@ -80,7 +85,7 @@ export default defineComponent({
 }
 .card-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 2em;
   padding: 20px;
   margin: 0 10em;
