@@ -6,7 +6,7 @@
   </v-app>
 </template>
 <script>
-import MonacoEditor from '../components/MonacoEditor.vue'
+import MonacoEditor from '@/components/MonacoEditor.vue'
 
 export default {
   name: "EditorPage",
