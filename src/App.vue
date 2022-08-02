@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav>
-      <div class="logo">CODE101</div>
+      <div class="logo">Code101</div>
       <div class="onglets">
         <a><router-link to="/">Accueil</router-link></a>
         <a><router-link to="courses">Cours</router-link></a>
