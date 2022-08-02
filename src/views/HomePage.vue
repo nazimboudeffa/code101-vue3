@@ -3,7 +3,7 @@
     <div class="hero-text">
         <h1>Apprenez à coder en ligne</h1>
         <p>Apprendre à coder n'a jamais été aussi facile</p>
-        <a class="btn"><router-link to="editor">Tester l'Editeur</router-link></a>
+        <router-link to="editor"><a href="editeur" class="btn">Tester l'Editeur</a></router-link>
     </div>
     </div>
 </template>

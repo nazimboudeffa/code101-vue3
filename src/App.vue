@@ -6,7 +6,6 @@
         <a><router-link to="/">Accueil</router-link></a>
         <a><router-link to="courses">Cours</router-link></a>
         <a><router-link to="price">Prix</router-link></a>
-        <a><router-link to="editor">Editeur</router-link></a>
       </div>
       <div class="buttons">
         <span>Login</span>
