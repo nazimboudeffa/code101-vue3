@@ -84,9 +84,8 @@ export default defineComponent({
   font-size: 18px !important;
 }
 .card-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2em;
+  display: flex;
+  justify-content: space-around;
   padding: 20px;
   margin: 0 10em;
 }
