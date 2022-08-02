@@ -3,7 +3,7 @@
     <h2>{{ title }}</h2>
     <span>{{ price }}</span>
     <slot></slot>
-    <Button text="Subscribe" />
+    <Button text="S'inscrire" />
   </div>
 </template>
 

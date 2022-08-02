@@ -7,8 +7,8 @@
         <a><router-link to="price">Tarifs</router-link></a>
       </div>
       <div class="buttons">
-        <span class="login">Login</span>
-        <button class="menubtn">Register</button>
+        <span class="login">Connexion</span>
+        <button class="menubtn">S'inscrire</button>
       </div>
     </nav>
 </template>
