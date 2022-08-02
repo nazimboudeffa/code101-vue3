@@ -1,6 +1,6 @@
 <template>
     <nav>
-      <div class="logo">Code101</div>
+      <div class="logo">Code<span class="oneoone">101</span></div>
       <div class="onglets">
         <a><router-link to="/">Accueil</router-link></a>
         <a><router-link to="courses">Cours</router-link></a>
@@ -40,6 +40,15 @@ export default {
     font-weight:700;
     font-size:1.4rem;
     color: white;
+  }
+  .oneoone{
+    font-weight:700;
+    font-size:1.4rem;
+    color: white;
+    border: solid 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: 4px;
   }
   .onglets a {
     margin-right:20px;
