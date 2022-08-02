@@ -2,23 +2,26 @@
   <!-- <div id="editor" style="width: 500px; height: 500px"></div> -->
   <v-container fluide>
     <div class="course">
-      <div class="instructions">
-         <h1>Cours 1</h1>
-         <p>Ajouter une balise h2 avec comme contenu <b>J'aime coder</b></p>
-      </div>
-      <div class="code">
-         <div id="editorCode" ref="editorRef"></div>
-         <v-btn
-            color="primary"
-            elevation="2"
-            tile
-            @click="runCode()"
-         >Exécuter</v-btn>
-      </div>
+      
+         <div class="instructions">
+            <h1>Cours 1</h1>
+            <p>Ajouter une balise h2 avec comme contenu <b>J'aime coder</b></p>
+         </div>
 
-      <div class="preview">
-         <iframe id="editorPreview" frameborder="0"></iframe>
-      </div>
+         <div class="code">
+            <div id="editorCode" ref="editorRef"></div>
+            <v-btn
+               color="primary"
+               elevation="2"
+               tile
+               @click="runCode()"
+            >Exécuter</v-btn>
+         </div>
+         
+         <div class="preview">
+            <iframe id="editorPreview" frameborder="0"></iframe>
+         </div>
+
     </div>
    </v-container>
 </template>
@@ -107,6 +110,11 @@ return { runCode }
 </script>
 
 <style>
+.splitpanes__pane {
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
 .course {
    position: fixed;
    top: 0;
