@@ -1,7 +1,7 @@
 <template>
 <div class="cont">
   <h1>Nos tarifs</h1>
-  <p>Ne payez que ce dont vous avez besoin</p>
+  <p>Abonnement par mois</p>
   <div class="card-wrapper">
     <PricingCard title="Basic" price="0.00€">
       <ul>
