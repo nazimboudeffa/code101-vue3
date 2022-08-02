@@ -3,7 +3,7 @@
   <h1>Nos tarifs</h1>
   <p>Ne payez que ce dont vous avez besoin</p>
   <div class="card-wrapper">
-    <PricingCard title="Gratuit" price="0.00€">
+    <PricingCard title="Basic" price="0.00€">
       <ul>
         <li v-for="(item, index) in pricingDetails" :key="index">
           <div v-for="value in item" :key="value">
@@ -52,7 +52,7 @@ export default defineComponent({
         member: "zone membre",
       },
       {
-        users: "4 utilisateurs",
+        users: "5 utilisateurs",
         courses: "cours pro",
         member: "zone membre",
         roadmap: "roadmap",
