@@ -27,8 +27,7 @@ export default {
 
     .course {
         border: 1px solid #ccc;
-        background: #141c3e;
-        color: white;
+        background: #41b883;
         padding: 1rem;
         border-radius: 5px;
         text-align: center;
