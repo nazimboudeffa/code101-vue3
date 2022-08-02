@@ -2,11 +2,11 @@ const state = {
     courses: [
         {
             id: 1,
-            title: 'Course 1'
+            title: 'Cours un'
         },
         {
             id: 2,
-            title: 'Course 2'
+            title: 'Cours deux'
         }
     ]
 };

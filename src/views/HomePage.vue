@@ -8,14 +8,6 @@
     </div>
 </template>
 <style>
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Helvetica;
-  font-size: 18px;
-}
-
 #hero{
   background-image: url('https://raw.githubusercontent.com/nazimboudeffa/assets2/main/pics/unsplash/christin-hume-mfB1B1s4sMc-unsplash.jpg');
   background-position: center;
@@ -29,6 +21,7 @@
 
 .hero-text{
   margin-left: 50px;
+  color: white;
 }
 
 .hero-text h1{

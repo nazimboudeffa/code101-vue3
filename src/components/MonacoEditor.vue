@@ -30,12 +30,10 @@
 import { onMounted } from "vue";
 import * as monaco from 'monaco-editor';
 //import loader from "@monaco-editor/loader";
-import { mapGetters } from 'vuex';
 
 
 export default {
  name: "MonacoEditor",
- computed: mapGetters(['allCourses']),
  setup() {
 
 let codeEditor = null;
@@ -51,7 +49,7 @@ const HTML_CODE =
         minimap: { enabled: false },
         automaticLayout: true,
         contextmenu: false,
-        fontSize: 12,
+        //fontSize: 12,
         scrollbar: {
             useShadows: false,
             vertical: 'visible',
@@ -142,6 +140,7 @@ return { runCode }
   flex-grow: 1;
   width: 50%;
   height: 90%;
+  font-size: 1.5rem;
 }
 
 .preview {
