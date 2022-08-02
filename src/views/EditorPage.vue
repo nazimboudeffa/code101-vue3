@@ -1,9 +1,5 @@
 <template>
-  <v-app>
-    <v-main>
-      <MonacoEditor/>
-    </v-main>
-  </v-app>
+  <MonacoEditor/>
 </template>
 <script>
 import MonacoEditor from '@/components/MonacoEditor.vue'

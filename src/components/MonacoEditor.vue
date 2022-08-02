@@ -1,36 +1,28 @@
 <template>
-  <!-- <div id="editor" style="width: 500px; height: 500px"></div> -->
-  <v-container fluide>
-    <div class="course">
-      
-         <div class="instructions">
-            <h1>Cours 1</h1>
-            <p>Ajouter une balise h2 avec comme contenu <b>J'aime coder</b></p>
-         </div>
+   <v-btn
+      color="primary"
+      elevation="2"
+      tile
+      @click="runCode()"
+   >Exécuter</v-btn>
+   <div class="editor">
 
-         <div class="code">
+         <div id="code">
             <div id="editorCode"></div>
-            <v-btn
-               color="primary"
-               elevation="2"
-               tile
-               @click="runCode()"
-            >Exécuter</v-btn>
-         </div>
-         
-         <div class="preview">
+         </div> 
+
+         <div id="preview">
             <iframe id="editorPreview" frameborder="0"></iframe>
          </div>
 
-    </div>
-   </v-container>
+   </div>
 </template>
 
 <script>
 import { onMounted } from "vue";
 import * as monaco from 'monaco-editor';
 //import loader from "@monaco-editor/loader";
-
+import Split from 'split.js';
 
 export default {
  name: "MonacoEditor",
@@ -100,7 +92,8 @@ window.MonacoEnvironment = {
       }
 
 onMounted(()=>{
-   createEditor()
+   createEditor();
+   Split(['#code', '#preview']);
 })
 
 return { runCode }
@@ -110,45 +103,31 @@ return { runCode }
 </script>
 
 <style>
-.splitpanes__pane {
-   justify-content: center;
-   align-items: center;
-   display: flex;
-}
-.course {
+.editor {
    position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
    background-color: #999;
-   padding: 10px;
-   margin: 0px;
    display: flex;
-   flex-direction: row;
-   flex-wrap: nowrap;
-   justify-content: space-evenly;
-   align-items: stretch;
+   justify-content: row;
+   height: 100%;
+   width: 100%;
 }
 
-.instructions {
-   width: 30%;
-}
-
-.code {
-  background-color: #efefef;
-  flex-grow: 1;
+#code {
   width: 50%;
-  height: 90%;
-  font-size: 1.5rem;
+
 }
 
-.preview {
-   width: 20%;
-   margin-left: 10px;
+#preview {
+   width: 50%;
+   
 }
 
-.code > *{
+#code > *
+{
+   height: 100%;
+}
+
+#preview > *{
    height: 100%;
 }
 
