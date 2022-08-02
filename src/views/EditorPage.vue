@@ -9,7 +9,7 @@
 import MonacoEditor from '../components/MonacoEditor.vue'
 
 export default {
-  name: "CoursePage",
+  name: "EditorPage",
   components: {
     MonacoEditor
   }
