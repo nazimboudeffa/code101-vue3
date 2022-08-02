@@ -1,10 +1,20 @@
 <template>
-
-    <router-link to="/">Accueil</router-link>
-    <router-link to="course">Cours</router-link>
-    <router-link to="price">Prix</router-link>
-
-    <router-view />
+  <header>
+    <nav>
+      <div class="logo">CODE101</div>
+      <div class="onglets">
+        <a><router-link to="/">Accueil</router-link></a>
+        <a><router-link to="courses">Cours</router-link></a>
+        <a><router-link to="price">Prix</router-link></a>
+      </div>
+      <div class="buttons">
+        <span>Login</span>
+        <button class="btn">Register</button>
+      </div>
+    </nav>
+  </header>
+  
+  <router-view />
 
 </template>
 
@@ -33,3 +43,34 @@ export default {
   })
 }
 </script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #141414;
+    color: #fff
+  }
+  nav {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.4rem;
+  }
+  .onglets a {
+    margin-right:20px;
+    cursor:pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .btn{
+    background:white;
+    color:black;
+    border-radius:24px;
+    height:32px;
+    margin-left:10px;
+  }
+</style>
