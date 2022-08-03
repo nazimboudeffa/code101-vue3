@@ -3,7 +3,7 @@
     <div class="hero-text">
         <h1 text-3xl font-bold underline>Apprenez à coder en ligne</h1>
         <p>Le site francophone pour apprendre le développement web</p>
-        <router-link to="editor"><a href="editeur" class="btn">Tester l'Editeur</a></router-link>
+        <router-link to="pricing"><a class="btn">Nous rejoindre</a></router-link>
     </div>
     </div>
 </template>

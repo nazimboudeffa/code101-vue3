@@ -1,10 +1,10 @@
 <template>
     <nav>
-      <div class="logo">Code<span class="oneoone">101</span></div>
+      <div class="logo"><router-link to="/" style="text-decoration: none; color: inherit;"><a>Code<span class="oneoone">101</span></a></router-link></div>
       <div class="onglets">
-        <router-link to="/"><a class="onglet">Accueil</a></router-link>
-        <router-link to="courses"><a class="onglet">Cours</a></router-link>
-        <router-link to="pricing"><a class="onglet">Tarifs</a></router-link>
+        <router-link to="pricing" style="text-decoration: none; color: inherit;"><a class="onglet">Tarifs</a></router-link>
+        <router-link to="courses" style="text-decoration: none; color: inherit;"><a class="onglet">Cours</a></router-link>
+        <router-link to="editor" style="text-decoration: none; color: inherit;"><a class="onglet">Editeur</a></router-link>
       </div>
       <div class="buttons">
         <!-- <span class="login">Connexion</span> -->
@@ -22,7 +22,8 @@ export default {
         menuItems: [
             { title: 'Home', path: '/' },
             { title: 'Cours', path: '/courses' },
-            { title: 'Prix', path: '/prices' }
+            { title: 'Prix', path: '/priceing' },
+            { title: 'Editeur', path: '/editor' }
         ]
     })
 }

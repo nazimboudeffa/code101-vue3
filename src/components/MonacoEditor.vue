@@ -1,6 +1,6 @@
 <template>
-   <div id="editor" class="flex flex-row h-full">
-      <div id="split-0" class="h-full w-full">
+   <div id="editor">
+      <div id="split-0">
             <v-btn
       color="primary"
       elevation="2"
@@ -15,9 +15,9 @@
       icon="mdi-stop"
       @click="initEditor()"
    ></v-btn>
-         <div id="editorCode" class="h-full w-full"></div>
+         <div id="editorCode"></div>
       </div>
-      <iframe id="editorPreview" frameborder="0" class="h-full w-full"></iframe>
+      <iframe id="editorPreview" frameborder="0"></iframe>
    </div>
 </template>
 
