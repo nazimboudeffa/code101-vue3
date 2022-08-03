@@ -8,7 +8,7 @@
       </div>
       <div class="buttons">
         <span class="login">Connexion</span>
-        <a href="https://fr.tipeee.com/nazimboudeffa/news/147467" target="_blank" class="menubtn">S'inscrire</a>
+        <a class="menubtn">S'inscrire</a>
       </div>
     </nav>
 </template>
