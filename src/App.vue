@@ -17,17 +17,3 @@ export default {
 }
 }
 </script>
-<style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-  }
-  body {
-    background-color: #141414;
-    color: #fff;
-  }
-</style>

@@ -3,11 +3,21 @@
     <div class="hero-text">
         <h1 text-3xl font-bold underline>Apprenez à coder en ligne</h1>
         <p>Le site francophone pour apprendre le développement web</p>
-        <router-link to="pricing"><a class="btn">Nous rejoindre</a></router-link>
+        <router-link to="pricing"><a class="herobtn">Nous rejoindre</a></router-link>
     </div>
     </div>
 </template>
-<style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: #141414;
+    color: #fff;
+  }
 #hero{
   background-image: url('https://raw.githubusercontent.com/nazimboudeffa/assets2/main/pics/unsplash/christin-hume-mfB1B1s4sMc-unsplash.jpg');
   background-position: center;
@@ -32,7 +42,7 @@
   font-size: 1.5rem;
 }
 
-.btn {
+.herobtn {
   text-decoration: none;
   color: orange;
   background-color: black;
@@ -45,7 +55,7 @@
   margin-top: 20px;
 }
 
-.btn:hover{
+.herobtn:hover{
   color: black;
   background-color: orange;
   border-color: black;

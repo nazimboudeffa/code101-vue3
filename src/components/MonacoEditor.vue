@@ -2,19 +2,19 @@
    <div id="editor">
       <div id="split-0">
             <v-btn
-      color="primary"
-      elevation="2"
-      tile
-      icon="mdi-play"
-      @click="runCode()"
-   ></v-btn>
-            <v-btn
-      color="secondary"
-      elevation="2"
-      tile
-      icon="mdi-stop"
-      @click="initEditor()"
-   ></v-btn>
+               color="primary"
+               elevation="2"
+               tile
+               icon="mdi-play"
+               @click="runCode()"
+            ></v-btn>
+                     <v-btn
+               color="secondary"
+               elevation="2"
+               tile
+               icon="mdi-stop"
+               @click="initEditor()"
+            ></v-btn>
          <div id="editorCode"></div>
       </div>
       <iframe id="editorPreview" frameborder="0"></iframe>
@@ -44,17 +44,16 @@ const HTML_CODE =
         minimap: { enabled: false },
         automaticLayout: true,
         contextmenu: false,
-        fontSize: 8,
+        fontSize: 12,
         scrollbar: {
             useShadows: false,
             vertical: 'visible',
             horizontal: 'visible',
             horizontalScrollbarSize: 12,
             verticalScrollbarSize: 12
-        },
-        lineHeight: 30
+        }
     };
-
+/*
 window.MonacoEnvironment = {
    getWorkerUrl: function() {
       return `data:text/javascript;charset=utf-8,${encodeURIComponent(`
@@ -64,10 +63,12 @@ window.MonacoEnvironment = {
         importScripts('https://cdn.jsdelivr.net/npm/monaco-editor/min/vs/base/worker/workerMain.js');`)}`;
    }
 };
-
+*/
 //let codeValue;
 //loader.init().then((monaco) => {
+   
    const createEditor = () => {
+
       monaco.editor.defineTheme("lightBlue", {
         base: "vs-dark",
         inherit: true,
@@ -87,10 +88,8 @@ window.MonacoEnvironment = {
       codeEditor.onDidChangeModelContent(() => {
          editorPreview.body.innerHTML = codeEditor.getValue();
       });
-      */
-   }
-//});  
-
+      */  
+   };
 const initEditor = () => {
    console.log("init editor")
 
@@ -119,6 +118,7 @@ return { runCode, initEditor }
    display: flex;
    justify-content: row;
    height: 100vh;
+   width: 100wh;
 }
 
 #split-0 {

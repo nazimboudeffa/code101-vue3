@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <h2>{{ title }}</h2>
-    <span>{{ price }}</span>
+    <h2 class="h2card">{{ title }}</h2>
+    <span class="spancard">{{ price }}</span>
     <slot></slot>
     <Button text="Inscription" />
   </div>

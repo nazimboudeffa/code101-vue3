@@ -4,8 +4,8 @@
   <p>Abonnement par mois</p>
   <div class="card-wrapper">
     <PricingCard title="Basic" price="0.00€">
-      <ul>
-        <li v-for="(item, index) in pricingDetails" :key="index">
+      <ul class="ulcard">
+        <li class="licard" v-for="(item, index) in pricingDetails" :key="index">
           <div v-for="value in item" :key="value">
             <div class="list-item" v-if="index === 0">{{ value }}</div>
           </div>
@@ -13,8 +13,8 @@
       </ul>
     </PricingCard>
     <PricingCard title="Pro" price="4.99€">
-      <ul>
-        <li v-for="(item, index) in pricingDetails" :key="index">
+      <ul class="ulcard">
+        <li class="licard" v-for="(item, index) in pricingDetails" :key="index">
           <div v-for="value in item" :key="value">
             <div class="list-item" v-if="index === 1">{{ value }}</div>
           </div>
@@ -89,10 +89,10 @@ export default defineComponent({
   padding: 20px;
   margin: 0 10em;
 }
-span {
+.spancard {
   font-size: 1.8em;
 }
-ul {
+.ulcard {
   list-style: none;
   padding: 2em 3em 0;
 }
