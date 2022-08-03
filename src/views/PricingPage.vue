@@ -108,4 +108,10 @@ ul {
   border-top: 1px solid #2e2f30;
   border-bottom: 1px solid #2e2f30;
 }
+
+@media only screen and (max-width: 600px) {
+  .card-wrapper {
+    flex-wrap: wrap;
+  }
+}
 </style>
