@@ -5,14 +5,16 @@
       color="primary"
       elevation="2"
       tile
+      icon="mdi-play"
       @click="runCode()"
-   >Exécuter</v-btn>
+   ></v-btn>
             <v-btn
       color="secondary"
       elevation="2"
       tile
+      icon="mdi-stop"
       @click="initEditor()"
-   >Réinitialiser</v-btn>
+   ></v-btn>
          <div id="editorCode" class="h-full w-full"></div>
       </div>
       <iframe id="editorPreview" frameborder="0" class="h-full w-full"></iframe>
