@@ -7,8 +7,8 @@
         <router-link to="pricing"><a class="onglet">Tarifs</a></router-link>
       </div>
       <div class="buttons">
-        <span class="login">Connexion</span>
-        <a class="menubtn">S'inscrire</a>
+        <!-- <span class="login">Connexion</span> -->
+        <a class="menubtn">Se connecter</a>
       </div>
     </nav>
 </template>
@@ -68,7 +68,7 @@ export default {
     font-size: 1rem;
   }
   .menubtn{
-    background:white;
+    background:orange;
     color:black;
     padding: 0 24px;
     border-radius:24px;
