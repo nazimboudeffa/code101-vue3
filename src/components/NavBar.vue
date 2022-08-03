@@ -8,7 +8,7 @@
       </div>
       <div class="buttons">
         <!-- <span class="login">Connexion</span> -->
-        <a class="menubtn">Se connecter</a>
+        <a class="menubtn">Connexion</a>
       </div>
     </nav>
 </template>

@@ -3,6 +3,7 @@ import HomePage from '@/views/HomePage.vue';
 import CoursesPage from '@/views/CoursesPage.vue';
 import PricingPage from '@/views/PricingPage.vue';
 import EditorPage from '@/views/EditorPage.vue';
+import LoginPage from '@/views/LoginPage.vue';
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: '/editor',
     component: EditorPage
   },
+  {
+    name: 'Login',
+    path: '/login',
+    component: LoginPage
+  }
 ];
 
 const router = createRouter({
