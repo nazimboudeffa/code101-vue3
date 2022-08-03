@@ -53,7 +53,7 @@ export default {
   .onglet {
     margin-right:20px;
     cursor:pointer;
-        color: orange;
+    color: orange;
     background-color: black;
     text-decoration: none;
     padding-left: 10px;
