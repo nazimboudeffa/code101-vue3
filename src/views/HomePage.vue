@@ -2,7 +2,7 @@
     <div id="hero">
     <div class="hero-text">
         <h1 text-3xl font-bold underline>Apprenez à coder en ligne</h1>
-        <p>Apprendre à coder n'a jamais été aussi facile</p>
+        <p>Le site francophone pour apprendre le développement web</p>
         <router-link to="editor"><a href="editeur" class="btn">Tester l'Editeur</a></router-link>
     </div>
     </div>

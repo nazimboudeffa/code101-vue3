@@ -34,8 +34,8 @@ export default {
 let codeEditor = null;
 
 const HTML_CODE = 
-    (`<h1>Hello Monde</h1>
-<p>This is the Monaco Editor for code101.fr</p>
+    (`<h1>Salut à tous !</h1>
+<p>Ceci est l'éditeur du site code101.fr</p>
 `);
 
     const editorOptions = {
