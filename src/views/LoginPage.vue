@@ -2,7 +2,7 @@
    <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
-    <h2 class="active"> Entrez vos infos </h2>
+    <h2 class="personal"> Entrez vos infos </h2>
 
     <!-- Icon 
     <div class="fadeIn first">
@@ -48,7 +48,7 @@ body {
   font-weight: 400;
 }
 
-h2 {
+.personal {
   text-align: center;
   font-size: 16px;
   font-weight: 600;
@@ -97,7 +97,7 @@ h2 {
 
 
 
-/* TABS */
+/* TABS 
 
 h2.inactive {
   color: #cccccc;
@@ -107,7 +107,7 @@ h2.active {
   color: #0d0d0d;
   border-bottom: 2px solid #41b883;
 }
-
+*/
 
 
 /* FORM TYPOGRAPHY*/
