@@ -11,7 +11,7 @@
       color="secondary"
       elevation="2"
       tile
-      @click="runCode()"
+      @click="initEditor()"
    >Réinitialiser</v-btn>
          <div id="editorCode" class="h-full w-full"></div>
       </div>
@@ -89,6 +89,13 @@ window.MonacoEnvironment = {
    }
 //});  
 
+const initEditor = () => {
+   console.log("init editor")
+
+   const editorPreview = document.getElementById('editorPreview').contentWindow.document;
+   editorPreview.body.innerHTML = HTML_CODE;
+}
+
       const runCode = () => {
         document.getElementById('editorPreview').contentWindow.document.body.innerHTML = codeEditor.getValue();        
       }
@@ -98,7 +105,7 @@ onMounted(()=>{
    Split(['#split-0', '#editorPreview']);
 })
 
-return { runCode }
+return { runCode, initEditor }
 
 }
 };
