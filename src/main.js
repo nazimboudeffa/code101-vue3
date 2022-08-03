@@ -4,6 +4,7 @@ import vuetify from './plugins/vuetify';
 import { loadFonts } from './plugins/webfontloader';
 import store from './store';
 import router from './router';
+import './index.css';
 
 loadFonts()
 

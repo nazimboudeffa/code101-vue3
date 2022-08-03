@@ -5,16 +5,11 @@
       tile
       @click="runCode()"
    >Exécuter</v-btn>
-   <div class="editor">
-
-         <div id="code">
-            <div id="editorCode"></div>
-         </div> 
-
-         <div id="preview">
-            <iframe id="editorPreview" frameborder="0"></iframe>
-         </div>
-
+   <div id="editor" class="flex flex-row h-full">
+      <div id="split-0" class="h-full w-full">
+         <div id="editorCode" class="h-full w-full"></div>
+      </div>
+      <iframe id="editorPreview" frameborder="0" class="h-full w-full"></iframe>
    </div>
 </template>
 
@@ -41,14 +36,15 @@ const HTML_CODE =
         minimap: { enabled: false },
         automaticLayout: true,
         contextmenu: false,
-        //fontSize: 12,
+        fontSize: 8,
         scrollbar: {
             useShadows: false,
             vertical: 'visible',
             horizontal: 'visible',
             horizontalScrollbarSize: 12,
             verticalScrollbarSize: 12
-        }
+        },
+        lineHeight: 30
     };
 
 window.MonacoEnvironment = {
@@ -93,7 +89,7 @@ window.MonacoEnvironment = {
 
 onMounted(()=>{
    createEditor();
-   Split(['#code', '#preview']);
+   Split(['#split-0', '#editorPreview']);
 })
 
 return { runCode }
@@ -103,6 +99,7 @@ return { runCode }
 </script>
 
 <style>
+
 .editor {
    position: fixed;
    background-color: #999;
@@ -112,23 +109,18 @@ return { runCode }
    width: 100%;
 }
 
-#code {
-  width: 50%;
-
+#split-0 {
+   width: 500px;
+   height: 500px;
 }
 
-#preview {
-   width: 50%;
-   
-}
-
-#code > *
-{
+#editorCode {
+   width: 100%;
    height: 100%;
 }
 
-#preview > *{
+#editorCode > * {
+      width: 100%;
    height: 100%;
 }
-
 </style>

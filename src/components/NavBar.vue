@@ -4,11 +4,11 @@
       <div class="onglets">
         <a><router-link to="/">Accueil</router-link></a>
         <a><router-link to="courses">Cours</router-link></a>
-        <a><router-link to="price">Tarifs</router-link></a>
+        <a><router-link to="pricing">Tarifs</router-link></a>
       </div>
       <div class="buttons">
         <span class="login">Connexion</span>
-        <a href="https://fr.tipeee.com/nazimboudeffa/news/147467" class="menubtn">S'inscrire</a>
+        <a href="https://fr.tipeee.com/nazimboudeffa/news/147467" target="_blank" class="menubtn">S'inscrire</a>
       </div>
     </nav>
 </template>

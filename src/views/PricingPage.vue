@@ -40,7 +40,7 @@
 import { defineComponent } from "vue";
 import PricingCard from "@/components/PricingCard.vue";
 export default defineComponent({
-  name: "PricePage",
+  name: "PricingPage",
   setup() {
     const pricingDetails = [
       {

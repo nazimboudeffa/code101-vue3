@@ -1,5 +1,5 @@
 <template>
-  <a href="https://fr.tipeee.com/nazimboudeffa/news/147467" class="button">
+  <a href="https://fr.tipeee.com/nazimboudeffa/news/147467" target="_blank" class="button">
     {{ text }}
   </a>
 </template>
