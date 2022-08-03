@@ -1,12 +1,18 @@
 <template>
-   <v-btn
+   <div id="editor" class="flex flex-row h-full">
+      <div id="split-0" class="h-full w-full">
+            <v-btn
       color="primary"
       elevation="2"
       tile
       @click="runCode()"
    >Exécuter</v-btn>
-   <div id="editor" class="flex flex-row h-full">
-      <div id="split-0" class="h-full w-full">
+            <v-btn
+      color="secondary"
+      elevation="2"
+      tile
+      @click="runCode()"
+   >Réinitialiser</v-btn>
          <div id="editorCode" class="h-full w-full"></div>
       </div>
       <iframe id="editorPreview" frameborder="0" class="h-full w-full"></iframe>
@@ -100,27 +106,40 @@ return { runCode }
 
 <style>
 
-.editor {
-   position: fixed;
-   background-color: #999;
+#editor {
    display: flex;
    justify-content: row;
-   height: 100%;
-   width: 100%;
+   height: 100vh;
 }
 
 #split-0 {
-   width: 500px;
-   height: 500px;
+   width: 100%;
+   height: 100%;
+   margin-left: 10px;
 }
 
 #editorCode {
    width: 100%;
    height: 100%;
+   margin-right: 10px;
 }
 
 #editorCode > * {
       width: 100%;
    height: 100%;
+}
+
+#editorPreview {
+   width: 100%;
+   height: 100%;
+}
+
+.gutter {
+  @apply dark:bg-gray-900 bg-no-repeat;
+  background-position: 50%;
+}
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+  cursor: col-resize;
 }
 </style>
