@@ -2,9 +2,9 @@
     <nav>
       <div class="logo">Code<span class="oneoone">101</span></div>
       <div class="onglets">
-        <a><router-link to="/">Accueil</router-link></a>
-        <a><router-link to="courses">Cours</router-link></a>
-        <a><router-link to="pricing">Tarifs</router-link></a>
+        <router-link to="/"><a class="onglet">Accueil</a></router-link>
+        <router-link to="courses"><a class="onglet">Cours</a></router-link>
+        <router-link to="pricing"><a class="onglet">Tarifs</a></router-link>
       </div>
       <div class="buttons">
         <span class="login">Connexion</span>
@@ -50,19 +50,18 @@ export default {
     padding-right: 2px;
     margin-left: 4px;
   }
-  .onglets a {
+  .onglet {
     margin-right:20px;
     cursor:pointer;
-    color: white;
+        color: orange;
+    background-color: black;
     text-decoration: none;
     padding-left: 10px;
+    padding-right: 10px;
   }
-  .onglets a:hover{
-    margin-right:20px;
-    cursor:pointer;
+  .onglet:hover{
     color: black;
-    background-color: white;
-    text-decoration: none;
+    background-color: orange;
   }
   .login {
     color: white;
