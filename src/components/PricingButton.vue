@@ -1,7 +1,7 @@
 <template>
-  <button class="button">
+  <a href="https://fr.tipeee.com/nazimboudeffa/news/147467" class="button">
     {{ text }}
-  </button>
+  </a>
 </template>
 
 <script>
@@ -27,6 +27,9 @@ export default defineComponent({
   position: absolute;
   left: 15%;
   font-size: inherit;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .card:hover .button {
   color: #141C3E;

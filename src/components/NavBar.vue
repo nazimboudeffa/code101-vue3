@@ -8,7 +8,7 @@
       </div>
       <div class="buttons">
         <span class="login">Connexion</span>
-        <button class="menubtn">S'inscrire</button>
+        <a href="https://fr.tipeee.com/nazimboudeffa/news/147467" class="menubtn">S'inscrire</a>
       </div>
     </nav>
 </template>
@@ -76,5 +76,8 @@ export default {
     height:32px;
     margin-left:10px;
     font-size: 1rem;
+    text-decoration: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 </style>
