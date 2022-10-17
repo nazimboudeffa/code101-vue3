@@ -2,11 +2,15 @@ const state = {
     courses: [
         {
             id: 1,
-            title: 'Cours un'
+            title: 'Cours un',
+            description: '',
+            answer: ''
         },
         {
             id: 2,
-            title: 'Cours deux'
+            title: 'Cours deux',
+            description: '',
+            answer: ''
         }
     ]
 };

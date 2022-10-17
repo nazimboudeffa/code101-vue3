@@ -4,7 +4,7 @@
             <h1>Liste des cours</h1>
             <div class="courses">
                 <div v-for="course in allCourses" :key="course.id" class="course">
-                    {{course.title}}
+                    <router_link to="/course/1">{{course.title}}</router_link>
                 </div>
             </div>
         </v-container>
